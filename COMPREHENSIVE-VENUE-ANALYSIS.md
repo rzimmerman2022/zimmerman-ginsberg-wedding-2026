@@ -655,10 +655,10 @@ When touring any venue, walk away if you encounter:
 - Here Comes the Guide
 
 **Save Venue Info:**
-- Create comparison docs in `/research/venues/`
-- Use venue comparison template
+- Create comparison docs using `venue-comparison-template.md`
+- Save as `venue-NAME-comparison.md` in root directory
 - Take photos during tours
-- Record in decision log after choosing
+- Record in `decision-log.md` after choosing
 
 ---
 

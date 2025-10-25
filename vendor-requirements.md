@@ -396,7 +396,7 @@ For ALL vendors, consider:
 
 ## Vendor Comparison Template
 
-Use the template files in `/research/[vendor-type]/` to compare specific vendors side-by-side.
+Use the template files (`venue-comparison-template.md`, `photographer-comparison-template.md`) to compare specific vendors side-by-side.
 
 ---
 

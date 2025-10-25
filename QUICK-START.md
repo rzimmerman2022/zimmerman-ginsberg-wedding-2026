@@ -10,19 +10,19 @@ Welcome to your wedding planning repository! This guide will help you get starte
 Start by reading [README.md](README.md) to understand the project structure and current phase.
 
 ### 2. Set Your Budget
-Open [docs/budget-breakdown.md](docs/budget-breakdown.md) and:
+Open [budget-breakdown.md](budget-breakdown.md) and:
 - Fill in your total budget
 - Adjust the percentage allocations to your priorities
 - Use this as your financial north star
 
 ### 3. Review the Timeline
-Check [docs/timeline.md](docs/timeline.md) to:
+Check [timeline.md](timeline.md) to:
 - Understand what phase you're in (currently 12-18 months before)
 - See what tasks should be happening now
 - Plan ahead for upcoming milestones
 
 ### 4. Start the Master Checklist
-Open [planning-tools/checklists/master-checklist.md](planning-tools/checklists/master-checklist.md):
+Open [master-checklist.md](master-checklist.md):
 - Begin checking off completed items
 - Focus on "12-18 Months Before" section first
 - Mark off items as you complete them
@@ -34,26 +34,27 @@ Open [planning-tools/checklists/master-checklist.md](planning-tools/checklists/m
 ### Task 1: Set Budget (This Week)
 - [ ] Discuss total budget with Jordyn
 - [ ] Determine who's contributing what
-- [ ] Fill in budget amounts in `docs/budget-breakdown.md`
+- [ ] Fill in budget amounts in `budget-breakdown.md`
 - [ ] Commit changes to git
 
 ### Task 2: Create Guest List Draft (This Week)
 - [ ] Each person creates their preliminary list
 - [ ] Combine lists
 - [ ] Get rough headcount
-- [ ] Create file: `guests/draft-guest-list.xlsx`
+- [ ] Use `guest-list-template.md` as starting point
 
 ### Task 3: Start Venue Research (This Week)
 - [ ] Research Arizona wedding venues
+- [ ] Review `COMPREHENSIVE-VENUE-ANALYSIS.md` and `VENUE-RESEARCH-TLDR.md`
 - [ ] Narrow to top 5 venues
-- [ ] Use venue comparison template for each
+- [ ] Use `venue-comparison-template.md` for each venue tour
 - [ ] Schedule venue tours
 
 ### Task 4: Choose Wedding Party (This Month)
 - [ ] Decide on wedding party size
 - [ ] Choose bridesmaids and groomsmen
 - [ ] Ask them to participate
-- [ ] Record decisions in `docs/decision-log.md`
+- [ ] Record decisions in `decision-log.md`
 
 ---
 
@@ -66,18 +67,18 @@ Open [planning-tools/checklists/master-checklist.md](planning-tools/checklists/m
 4. Track expenses in budget document
 
 ### Vendor Research
-1. Copy the appropriate comparison template from `/research/[vendor-type]/`
+1. Copy the appropriate comparison template (`venue-comparison-template.md` or `photographer-comparison-template.md`)
 2. Fill out template for each vendor you meet
-3. Save as `vendor-name-comparison.md` in same folder
+3. Save as `vendor-name-comparison.md` in root directory
 4. Compare side-by-side to make decisions
 
 ### Decision Making
-1. When you make a major decision, document it in `docs/decision-log.md`
+1. When you make a major decision, document it in `decision-log.md`
 2. Record the date, what was decided, why, and impact
 3. This helps maintain consistency and remember reasoning
 
 ### Budget Tracking
-1. Update `docs/budget-breakdown.md` when you:
+1. Update `budget-breakdown.md` when you:
    - Book a vendor (move from estimate to actual)
    - Make a deposit
    - Pay a final payment
@@ -127,26 +128,26 @@ git log --oneline
 ## Vendor Research Workflow
 
 ### 1. Initial Research
-- Use `/docs/vendor-requirements.md` to understand what to look for
+- Use `vendor-requirements.md` to understand what to look for
 - Search online, ask friends, check WeddingWire/The Knot
 - Create shortlist of 3-5 vendors per category
 
 ### 2. Vendor Meetings
-- Copy the appropriate comparison template
+- Copy the appropriate comparison template (`venue-comparison-template.md` or `photographer-comparison-template.md`)
 - Bring template to meeting or fill out after
 - Take notes on pros, cons, and gut feeling
 
 ### 3. Comparison & Decision
 - Review all completed comparison templates side-by-side
 - Consider: quality, value, personality fit, availability
-- Record final decision in `docs/decision-log.md`
+- Record final decision in `decision-log.md`
 
 ### 4. Booking
 - Review contract thoroughly
 - Sign contract
 - Pay deposit
-- Update budget tracker
-- Save contract in `/contracts/vendor-agreements/`
+- Update budget tracker in `budget-breakdown.md`
+- Save contract as separate file (e.g., `contract-venue-NAME-signed.pdf`)
 - Commit to git
 
 ---
@@ -158,14 +159,14 @@ git log --oneline
 - Include dates when relevant: `budget-2025-10.xlsx`
 - Use descriptive names: `photographer-john-smith-comparison.md`
 
-### Folder Usage
-- **docs/**: Main planning documents (read these frequently)
-- **research/**: Vendor comparisons and notes
-- **budget/**: Financial tracking and quotes
-- **guests/**: Guest list and RSVP tracking
-- **contracts/**: Signed agreements (mark as -signed in filename)
-- **planning-tools/**: Checklists and templates
-- **inspiration/**: Photos, color palettes, design ideas
+### File Organization
+All files are in the root directory for easy access:
+- **Planning docs**: `timeline.md`, `budget-breakdown.md`, `decision-log.md`, `vendor-requirements.md`
+- **Templates**: `venue-comparison-template.md`, `photographer-comparison-template.md`, `guest-list-template.md`
+- **Checklists**: `master-checklist.md`
+- **Research**: `COMPREHENSIVE-VENUE-ANALYSIS.md`, `VENUE-RESEARCH-TLDR.md`
+- **Vendor work**: Create new files for each vendor comparison (e.g., `venue-ironoaks-comparison.md`)
+- **Contracts**: Save signed contracts with descriptive names (e.g., `contract-venue-NAME-signed.pdf`)
 
 ### What to Commit to Git
 ✅ Planning documents  
@@ -271,7 +272,7 @@ A: Don't panic! Wedding planning is flexible. Focus on the must-haves (venue, ca
 ## Getting Help
 
 ### When You Need More Templates
-Copy and adapt existing templates in the `/research/` folders for new vendor types.
+Copy and adapt existing templates (`venue-comparison-template.md`, `photographer-comparison-template.md`) for new vendor types.
 
 ### When You're Overwhelmed
 1. Review the master checklist

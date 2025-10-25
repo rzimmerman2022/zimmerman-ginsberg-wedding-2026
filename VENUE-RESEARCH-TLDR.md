@@ -147,7 +147,7 @@ The math: You save $32K by staying in East Valley. That's a honeymoon, a house d
 ## One More Thing
 
 All the detailed analysis, pricing breakdowns, venue comparisons, and research is in:
-`/research/venues/COMPREHENSIVE-VENUE-ANALYSIS.md`
+`COMPREHENSIVE-VENUE-ANALYSIS.md`
 
 This document is 30+ pages of everything you need to know. This summary is just the highlights.
 

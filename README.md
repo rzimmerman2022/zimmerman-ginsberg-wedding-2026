@@ -23,26 +23,45 @@
 
 ## Quick Links
 
-- [Master Timeline](docs/timeline.md)
-- [Budget Breakdown](docs/budget-breakdown.md)
-- [Vendor Requirements](docs/vendor-requirements.md)
-- [Decision Log](docs/decision-log.md)
-- [Guest List](guests/guest-list.xlsx)
+- [Quick Start Guide](QUICK-START.md)
+- [Master Timeline](timeline.md)
+- [Budget Breakdown](budget-breakdown.md)
+- [Vendor Requirements](vendor-requirements.md)
+- [Decision Log](decision-log.md)
+- [Guest List Template](guest-list-template.md)
+- [Master Checklist](master-checklist.md)
+- [Comprehensive Venue Analysis](COMPREHENSIVE-VENUE-ANALYSIS.md)
+- [Venue Research TL;DR](VENUE-RESEARCH-TLDR.md)
 
 ---
 
 ## Repository Structure
 
-```
-zimmerman-ginsberg-wedding-2026/
-├── docs/              # Core planning documents
-├── research/          # Vendor and venue research
-├── budget/            # Financial tracking and quotes
-├── guests/            # Guest management and RSVPs
-├── contracts/         # Signed vendor agreements
-├── planning-tools/    # Checklists and templates
-└── inspiration/       # Design and theme references
-```
+All wedding planning files are in the root directory for easy access:
+
+**Planning Documents:**
+- `timeline.md` - 18-month planning timeline
+- `budget-breakdown.md` - Detailed budget tracker
+- `vendor-requirements.md` - Vendor evaluation criteria
+- `decision-log.md` - Major decisions documentation
+- `master-checklist.md` - Complete task checklist
+
+**Templates:**
+- `guest-list-template.md` - Guest tracking with RSVP management
+- `venue-comparison-template.md` - Venue evaluation form
+- `photographer-comparison-template.md` - Photographer assessment
+
+**Venue Research:**
+- `COMPREHENSIVE-VENUE-ANALYSIS.md` - Detailed Arizona venue analysis
+- `VENUE-RESEARCH-TLDR.md` - Executive summary
+- `IMG_2034-2037.PNG` - Venue images from research
+- `comms 20251025.pdf` - Venue communications
+
+**Project Infrastructure:**
+- `docs/decisions/` - Architecture Decision Records (ADRs)
+- `docs/handoffs/` - Session handoff documentation
+- `state/` - Session state files
+- `outputs/` - Run outputs
 
 ---
 
