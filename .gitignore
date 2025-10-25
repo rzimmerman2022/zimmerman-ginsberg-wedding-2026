@@ -1,0 +1,121 @@
+# Wedding Planning Repository .gitignore
+
+# Sensitive Information
+**/passwords.txt
+**/credentials.*
+**/api-keys.*
+**/vendor-passwords.*
+
+# Personal Financial Information
+**/bank-statements/
+**/credit-card-info.*
+**/payment-confirmations/
+budget/*-actual.xlsx
+budget/*-actual.csv
+
+# Contracts with Personal Info
+contracts/**/*-signed.pdf
+contracts/**/ssn-*.pdf
+
+# Guest Personal Information
+guests/*-addresses-full.*
+guests/*-phone-numbers.*
+guests/*-emails-full.*
+
+# Vendor Contracts (keep templates, ignore signed)
+contracts/**/*-executed.*
+
+# Photography/Media (large files)
+*.psd
+*.ai
+*.indd
+*.raw
+*.cr2
+*.nef
+*.tif
+*.tiff
+inspiration/**/*.jpg
+inspiration/**/*.png
+inspiration/**/*.gif
+
+# Temporary Files
+*.tmp
+*.temp
+~$*
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Office Temporary Files
+~$*.xlsx
+~$*.docx
+~$*.pptx
+
+# System Files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+desktop.ini
+$RECYCLE.BIN/
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Backup Files
+*.backup
+*.bak
+*.old
+
+# Archives (usually large)
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# Logs
+*.log
+
+# Database Files (if any)
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment Files
+.env
+.env.local
+
+# Node Modules (if using any web tools)
+node_modules/
+npm-debug.log*
+
+# Python (if using any scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+env/
+
+# Exclude actual vendor quotes (keep templates)
+budget/vendor-quotes/*-quote-*.pdf
+budget/vendor-quotes/*-proposal-*.pdf
+
+# Keep templates and examples
+!**/*template*
+!**/*example*
+!**/*sample*
+
+# Notes
+notes/private/
+notes/personal/
+```
