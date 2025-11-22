@@ -1,8 +1,8 @@
 # File: wedding_metrics_summary.csv
 # Created By: claude-sonnet-4-5-20250929
 # Created Date: 2025-11-22
-# Last Modified By: claude-sonnet-4-5-20250929
-# Last Modified Date: 2025-11-22 14:45:00 UTC
+# Last Modified By: gpt-5-codex-high
+# Last Modified Date: 2025-11-22 09:41:46 UTC
 # Description: High-level metrics dashboard tracking guest count, budget, vendors, and timeline
 # Update Frequency: Weekly or after significant changes
 #
@@ -26,12 +26,14 @@ Venue,Venues Researched,0,,,
 Venue,Venues Toured,0,,,
 Venue,Venue Booked,No,,,
 Venue,Venue Capacity,0,,,Maximum guests allowed
-Timeline,Wedding Date,2026,,,Year only - specific date TBD
-Timeline,Months Until Wedding,,,,,
-Timeline,Days Until Wedding,,,,,
+Venue,Venue Capacity Target,TBD,,2025-11-22 09:41:46 UTC,Set once venue shortlist is known
+Timeline,Wedding Date,November 2026 (exact date TBD),,,Year and month only until date is locked
+Timeline,Countdown Anchor Date,2026-11-15 (placeholder),,2025-11-22 09:41:46 UTC,Adjust to actual date once selected
+Timeline,Months Until Wedding (Anchor),12,,2025-11-22 09:41:46 UTC,Approx vs placeholder anchor date
+Timeline,Days Until Wedding (Anchor),358,,2025-11-22 09:41:46 UTC,Calculated vs placeholder anchor date
 Timeline,Save the Dates Sent,No,,,
 Timeline,Invitations Sent,No,,,
-Timeline,RSVP Deadline,,,,,
+Timeline,RSVP Deadline (Target),TBD (recommend 8-10 weeks before wedding),,2025-11-22 09:41:46 UTC,Set after final date
 Vendors,Total Vendors Needed,0,,,
 Vendors,Vendors Contacted,0,,,
 Vendors,Vendors Booked,0,,,

@@ -1,13 +1,15 @@
 # File: wedding_vendor_tracker.csv
 # Created By: claude-sonnet-4-5-20250929
 # Created Date: 2025-11-22
-# Last Modified By: claude-sonnet-4-5-20250929
-# Last Modified Date: 2025-11-22 14:45:00 UTC
+# Last Modified By: gpt-5-codex-high
+# Last Modified Date: 2025-11-22 09:41:46 UTC
 # Description: Vendor contact log with quotes, contracts, and decision tracking
 # Vendors Contacted: 0 | Vendors Booked: 0 | Contracts Signed: 0
 #
 Vendor_Category,Vendor_Name,Contact_Person,Email,Phone,Website,Address,Quote_Amount,Contract_Status,Deposit_Amount,Deposit_Due_Date,Final_Payment_Due,Services_Included,Meeting_Date,Follow_Up_Date,Rating,Pros,Cons,Decision_Status,Notes
 Venue,,,,,,,,Not Contacted,,,,,,,,,,,
+Venue,Venue Candidate #1 (TBD),,,,,,,Researching,,,,,,,,,,"Placeholder to capture capacity/price/availability; added by gpt-5-codex-high on 2025-11-22 09:41:46 UTC"
+Venue,Venue Candidate #2 (TBD),,,,,,,Researching,,,,,,,,,,"Placeholder to capture capacity/price/availability; added by gpt-5-codex-high on 2025-11-22 09:41:46 UTC"
 Catering,,,,,,,,Not Contacted,,,,,,,,,,,
 Photography,,,,,,,,Not Contacted,,,,,,,,,Need photographer,HIGH PRIORITY - Need to research and contact,,Photographer needed
 Videography,,,,,,,,Not Contacted,,,,,,,,,,,

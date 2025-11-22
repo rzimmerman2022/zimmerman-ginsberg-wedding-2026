@@ -9,11 +9,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### To Do
-- Create wedding_metrics_registry.csv (referenced in README)
 - Set wedding date (month/day in 2026)
 - Finalize venue selection
 - Complete guest list with actual names
 - Establish total budget
+
+---
+
+## [0.2.3] - 2025-11-22 09:41:46 UTC
+**Author:** gpt-5-codex-high
+
+### Added
+- Created `dashboard.html`, a modern single-page visual dashboard with metric cards, timeline focus, vendor snapshot (including Isabella's), budget notes, and next actions, using current snapshot data and placeholder countdown.
+
+---
+
+## [0.2.2] - 2025-11-22 09:41:46 UTC
+**Author:** gpt-5-codex-high
+
+### Added
+- Added November 2026 timeline anchor (placeholder date, months/days countdown, RSVP target) and venue capacity target rows in `wedding_metrics_summary.csv`.
+- Extended `wedding_metrics_registry.csv` with anchor-date metrics, RSVP target, and capacity target definitions.
+- Inserted placeholder venue candidate rows and updated metadata in `wedding_vendor_tracker.csv`.
+- Added budget-target notes for key categories and updated metadata in `wedding_budget_tracker.csv`.
 
 ---
 
