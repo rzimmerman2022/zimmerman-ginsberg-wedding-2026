@@ -1,7 +1,7 @@
 # References - Wedding Planning Research
 
 **Document Type:** APA 7th Edition Bibliography
-**Created By:** claude-sonnet-4-5-20250929
+**Created By:** Ryan Zimmerman
 **Created Date:** 2025-11-22
 **Last Updated:** 2025-11-22
 **Research Period:** November 2025
@@ -307,7 +307,7 @@ This wedding planning project uses evidence-based planning recommendations deriv
 
 ---
 
-**Bibliography Compiled By:** claude-sonnet-4-5-20250929
+**Bibliography Compiled By:** Ryan Zimmerman
 **Research Date:** 2025-11-22
 **Citation Style:** APA 7th Edition
 **Total Sources:** 29 professional sources

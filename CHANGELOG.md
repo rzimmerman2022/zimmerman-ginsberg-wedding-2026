@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 
 ## [0.2.3] - 2025-11-22 09:41:46 UTC
-**Author:** gpt-5-codex-high
+**Author:** Ryan Zimmerman
 
 ### Added
 - Created `dashboard.html`, a modern single-page visual dashboard with metric cards, timeline focus, vendor snapshot (including Isabella's), budget notes, and next actions, using current snapshot data and placeholder countdown.
@@ -25,7 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 
 ## [0.2.2] - 2025-11-22 09:41:46 UTC
-**Author:** gpt-5-codex-high
+**Author:** Ryan Zimmerman
 
 ### Added
 - Added November 2026 timeline anchor (placeholder date, months/days countdown, RSVP target) and venue capacity target rows in `wedding_metrics_summary.csv`.
@@ -36,7 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 
 ## [0.2.1] - 2025-11-22 09:24:18 UTC
-**Author:** gpt-5-codex-high
+**Author:** Ryan Zimmerman
 
 ### Added
 - Logged Isabella's Kitchen as a rehearsal-dinner restaurant option in `wedding_vendor_tracker.csv` (food/drinks only, patio views, Scottsdale, travel time TBD).
@@ -44,7 +44,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 
 ## [0.2.0] - 2025-11-22
-**Author:** claude-sonnet-4-5-20250929
+**Author:** Ryan Zimmerman
 
 ### Added - Version Control & Documentation Enhancement
 
@@ -106,7 +106,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 
 ## [0.1.0] - 2025-11-22 09:19:18 UTC
-**Author:** gpt-5-codex-high
+**Author:** Ryan Zimmerman
 
 ### Added
 - Created project README with structure, data standards, and operational guidance
@@ -120,7 +120,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Every changelog entry MUST include:
 - **Version:** Semantic version number [MAJOR.MINOR.PATCH]
 - **Date:** ISO 8601 format (YYYY-MM-DD or YYYY-MM-DD HH:MM:SS TZ)
-- **Author:** Full model ID (claude-sonnet-4-5-20250929, gpt-5-codex-high, etc.)
+- **Author:** Author name (Ryan Zimmerman, Jordyn, etc.)
 - **Category:** Added, Changed, Deprecated, Removed, Fixed, Security
 - **Description:** Clear, concise description of changes
 - **Impact:** (optional) Effect on metrics, budget, timeline, etc.

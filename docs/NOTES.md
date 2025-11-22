@@ -1,6 +1,6 @@
 # Wedding Planning Notes
 
-**Created By:** claude-sonnet-4-5-20250929
+**Created By:** Ryan Zimmerman
 **Created Date:** 2025-11-22
 **Last Updated:** 2025-11-22 14:50:00 UTC
 
@@ -172,5 +172,5 @@ Current numbers:
 
 ---
 
-**Document maintained by:** claude-sonnet-4-5-20250929
+**Document maintained by:** Ryan Zimmerman
 **Last updated:** 2025-11-22 14:50:00 UTC

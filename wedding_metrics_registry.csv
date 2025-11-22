@@ -1,5 +1,7 @@
-# generated_by=gpt-5-codex-high; generated_at=2025-11-22 09:19:18 UTC
-# updated_by=gpt-5-codex-high; updated_at=2025-11-22 09:41:46 UTC
+# Created By: Ryan Zimmerman
+# Created Date: 2025-11-22
+# Last Modified By: Ryan Zimmerman
+# Last Modified Date: 2025-11-22
 metric_id,category,metric_name,definition,owner,source_data,formula_or_logic,target_value,baseline_value,current_value,as_of_date,update_cadence,notes
 M001,Guest Count,Jordyn Side Adults (Min),Minimum adult invitees from Jordyn's side,Jordyn,wedding_guest_list.csv,Count rows where Guest_Side="Jordyn" and Number_Adults>0,30,30,30,2025-11-22,Weekly,"Use exact count once names are added"
 M002,Guest Count,Ryan Side Adults (Est),Estimated adult invitees from Ryan's side,Ryan,wedding_guest_list.csv,Count rows where Guest_Side="Ryan" and Number_Adults>0,20,15,15-20,2025-11-22,Weekly,"Refine to a single count as guest list is filled"

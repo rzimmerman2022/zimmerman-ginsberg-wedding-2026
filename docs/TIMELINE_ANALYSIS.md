@@ -1,6 +1,6 @@
 # Wedding Timeline Analysis - November 2026
 
-**Created By:** claude-sonnet-4-5-20250929
+**Created By:** Ryan Zimmerman
 **Created Date:** 2025-11-22
 **Wedding Date:** November 2026 (specific date TBD)
 **Time Until Wedding:** ~12 months
@@ -537,6 +537,6 @@ Track your progress weekly:
 
 ---
 
-**Document Created By:** claude-sonnet-4-5-20250929
+**Document Created By:** Ryan Zimmerman
 **Last Updated:** 2025-11-22
 **Next Update:** After weekend planning session

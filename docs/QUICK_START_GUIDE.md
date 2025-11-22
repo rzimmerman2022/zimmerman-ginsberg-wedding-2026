@@ -1,6 +1,6 @@
 # Wedding Planning Quick Start Guide
 
-**Created By:** claude-sonnet-4-5-20250929
+**Created By:** Ryan Zimmerman
 **Created Date:** 2025-11-22
 **Wedding:** November 2026 (12 months away)
 **Status:** ✅ **Right on schedule!**
@@ -235,6 +235,6 @@ Track vendors: [wedding_vendor_tracker.csv](../wedding_vendor_tracker.csv)
 
 ---
 
-**Document created by:** claude-sonnet-4-5-20250929
+**Document created by:** Ryan Zimmerman
 **Last updated:** 2025-11-22
 **Next update:** After date selection

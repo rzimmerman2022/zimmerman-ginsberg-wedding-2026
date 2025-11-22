@@ -1,7 +1,7 @@
 # Contributing to Zimmerman-Ginsberg Wedding 2026 Planning
 
 **Document Version:** 1.0.0
-**Created By:** claude-sonnet-4-5-20250929
+**Created By:** Ryan Zimmerman
 **Created Date:** 2025-11-22
 **Last Updated:** 2025-11-22
 
@@ -36,15 +36,15 @@ This document provides guidelines for updating the wedding planning repository. 
 
 ## Metadata Requirements
 
-### For AI Model Contributions
+### For File Contributions
 
-Every file created or modified by an AI model MUST include:
+Every file created or modified MUST include:
 
 ```csv
 # File: <filename>
-# Created By: <model-id>
+# Created By: <author-name>
 # Created Date: <YYYY-MM-DD>
-# Last Modified By: <model-id>
+# Last Modified By: <author-name>
 # Last Modified Date: <YYYY-MM-DD HH:MM:SS TZ>
 # Description: <purpose of this file>
 ```
@@ -53,9 +53,9 @@ Every file created or modified by an AI model MUST include:
 
 ```csv
 # File: wedding_guest_list.csv
-# Created By: claude-sonnet-4-5-20250929
+# Created By: Ryan Zimmerman
 # Created Date: 2025-11-22
-# Last Modified By: claude-sonnet-4-5-20250929
+# Last Modified By: Ryan Zimmerman
 # Last Modified Date: 2025-11-22 14:30:00 UTC
 # Description: Master guest tracking list with RSVP and attendance data
 ```
@@ -526,15 +526,15 @@ If you need to track sensitive information:
 - Check CHANGELOG.md for recent changes
 - Review this CONTRIBUTING.md for standards
 
-**For AI assistants:**
+**For contributors:**
 
-- Always include your model ID in metadata
+- Always include your name in metadata
 - Add timestamp in UTC
-- Reference this document in prompts
+- Reference this document for standards
 - Update CHANGELOG.md for significant changes
 
 ---
 
-**Document Maintained By:** claude-sonnet-4-5-20250929
+**Document Maintained By:** Ryan Zimmerman
 **Last Updated:** 2025-11-22
 **Version:** 1.0.0
