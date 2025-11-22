@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zimmerman-Ginsberg Wedding 2026 | Planning Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Color Palette - Elegant Wedding Theme */
+            --primary: #2c3e50;
+            --primary-light: #34495e;
+            --accent: #e8b4b8;
+            --accent-dark: #d89ca1;
+            --gold: #d4af37;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --danger: #e74c3c;
+            --info: #3498db;
+            --light: #ecf0f1;
+            --lighter: #f8f9fa;
+            --dark: #2c3e50;
+            --gray: #95a5a6;
+            --white: #ffffff;
+
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+
+            /* Typography */
+            --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --font-display: 'Georgia', serif;
+
+            /* Shadows */
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 25px rgba(0,0,0,0.15);
+
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding-bottom: var(--spacing-xl);
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: var(--spacing-xl) var(--spacing-lg);
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '💍';
+            position: absolute;
+            top: -20px;
+            right: 10%;
+            font-size: 150px;
+            opacity: 0.1;
+            transform: rotate(-15deg);
+        }
+
+        header::after {
+            content: '💐';
+            position: absolute;
+            bottom: -30px;
+            left: 5%;
+            font-size: 120px;
+            opacity: 0.1;
+            transform: rotate(25deg);
+        }
+
+        h1 {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: var(--spacing-sm);
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+        }
+
+        .countdown {
+            margin-top: var(--spacing-md);
+            font-size: 1.1rem;
+            background: rgba(255,255,255,0.1);
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-radius: var(--radius-lg);
+            display: inline-block;
+            backdrop-filter: blur(10px);
+        }
+
+        .countdown strong {
+            color: var(--gold);
+            font-size: 1.3rem;
+            margin: 0 var(--spacing-xs);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: var(--spacing-lg);
+        }
+
+        /* Alert Banner */
+        .alert {
+            padding: var(--spacing-md);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--spacing-lg);
+            border-left: 5px solid;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .alert-critical {
+            background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+            border-color: var(--danger);
+            box-shadow: var(--shadow-md);
+        }
+
+        .alert-critical h3 {
+            color: var(--danger);
+            margin-bottom: var(--spacing-sm);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        /* Grid Layout */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        /* Cards */
+        .card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent) 0%, var(--gold) 100%);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+            padding-bottom: var(--spacing-sm);
+            border-bottom: 2px solid var(--light);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary);
+            flex: 1;
+        }
+
+        .card-subtitle {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-top: var(--spacing-xs);
+        }
+
+        /* Stats */
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+
+        .stat {
+            text-align: center;
+            padding: var(--spacing-md);
+            background: var(--lighter);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
+        }
+
+        .stat:hover {
+            background: var(--light);
+            transform: scale(1.05);
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: var(--spacing-xl);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: var(--spacing-lg);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -28px;
+            top: 8px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--accent);
+            border: 3px solid var(--white);
+            box-shadow: var(--shadow-sm);
+            z-index: 1;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: -21px;
+            top: 24px;
+            width: 2px;
+            height: calc(100% - 16px);
+            background: var(--light);
+        }
+
+        .timeline-item:last-child::after {
+            display: none;
+        }
+
+        .timeline-item.completed::before {
+            background: var(--success);
+        }
+
+        .timeline-item.critical::before {
+            background: var(--danger);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.8;
+            }
+        }
+
+        .timeline-date {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .timeline-content {
+            background: var(--lighter);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+        }
+
+        /* Vendor List */
+        .vendor-list {
+            list-style: none;
+        }
+
+        .vendor-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--spacing-md);
+            background: var(--lighter);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-sm);
+            transition: all 0.3s ease;
+        }
+
+        .vendor-item:hover {
+            background: var(--light);
+            transform: translateX(5px);
+        }
+
+        .vendor-name {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .vendor-contact {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-top: 2px;
+        }
+
+        .badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-critical {
+            background: var(--danger);
+            color: var(--white);
+        }
+
+        .badge-high {
+            background: var(--warning);
+            color: var(--white);
+        }
+
+        .badge-medium {
+            background: var(--info);
+            color: var(--white);
+        }
+
+        .badge-low {
+            background: var(--gray);
+            color: var(--white);
+        }
+
+        .badge-researching {
+            background: var(--accent);
+            color: var(--dark);
+        }
+
+        /* Checklist */
+        .checklist {
+            list-style: none;
+        }
+
+        .checklist-item {
+            padding: var(--spacing-sm);
+            margin-bottom: var(--spacing-xs);
+            border-left: 3px solid var(--light);
+            padding-left: var(--spacing-md);
+            transition: all 0.3s ease;
+        }
+
+        .checklist-item:hover {
+            border-left-color: var(--accent);
+            background: var(--lighter);
+        }
+
+        .checklist-item.urgent {
+            border-left-color: var(--danger);
+            background: #fff5f5;
+        }
+
+        /* Progress Bar */
+        .progress {
+            background: var(--light);
+            border-radius: var(--radius-lg);
+            height: 30px;
+            overflow: hidden;
+            margin: var(--spacing-md) 0;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent) 0%, var(--gold) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: width 1s ease;
+        }
+
+        /* Budget Table */
+        .budget-table {
+            width: 100%;
+            margin-top: var(--spacing-md);
+        }
+
+        .budget-row {
+            display: flex;
+            justify-content: space-between;
+            padding: var(--spacing-sm);
+            border-bottom: 1px solid var(--light);
+        }
+
+        .budget-row:last-child {
+            border-bottom: none;
+            font-weight: 600;
+            background: var(--lighter);
+            border-radius: var(--radius-sm);
+        }
+
+        .budget-category {
+            color: var(--primary);
+        }
+
+        .budget-amount {
+            font-weight: 600;
+            color: var(--accent-dark);
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: var(--spacing-sm);
+            margin-top: var(--spacing-md);
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: var(--spacing-sm) var(--spacing-md);
+            border: none;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-accent {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            color: var(--white);
+        }
+
+        .btn-accent:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: var(--spacing-lg);
+            color: var(--gray);
+            margin-top: var(--spacing-xl);
+        }
+
+        footer a {
+            color: var(--accent-dark);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            header::before,
+            header::after {
+                display: none;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        .card:nth-child(1) { animation-delay: 0.1s; }
+        .card:nth-child(2) { animation-delay: 0.2s; }
+        .card:nth-child(3) { animation-delay: 0.3s; }
+        .card:nth-child(4) { animation-delay: 0.4s; }
+        .card:nth-child(5) { animation-delay: 0.5s; }
+        .card:nth-child(6) { animation-delay: 0.6s; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Zimmerman ❤️ Ginsberg</h1>
+        <p class="subtitle">Wedding Planning Dashboard | November 2026</p>
+        <div class="countdown">
+            <span>🗓️</span> <strong>12 months</strong> until your big day | <strong>358 days</strong> and counting!
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Critical Alert -->
+        <div class="alert alert-critical">
+            <h3>🚨 CRITICAL: Immediate Action Required</h3>
+            <p><strong>You are 6-12 months behind the standard wedding planning timeline.</strong> Major vendors (venue, photographer, caterer) should have been booked by now. <strong>You must act THIS WEEK</strong> to secure quality vendors for November 2026.</p>
+            <div class="action-buttons">
+                <a href="#next-actions" class="btn btn-primary">View Next Actions ↓</a>
+                <a href="docs/TIMELINE_ANALYSIS.md" class="btn btn-accent">Read Full Timeline</a>
+            </div>
+        </div>
+
+        <!-- Stats Overview -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">📊</div>
+                <div>
+                    <div class="card-title">Planning Status Overview</div>
+                    <div class="card-subtitle">Current project metrics</div>
+                </div>
+            </div>
+            <div class="stat-grid">
+                <div class="stat">
+                    <span class="stat-value">0%</span>
+                    <span class="stat-label">Complete</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">33-60</span>
+                    <span class="stat-label">Est. Guests</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">$0</span>
+                    <span class="stat-label">Spent</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">0/8</span>
+                    <span class="stat-label">Vendors Booked</span>
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar" style="width: 5%;">5% Complete</div>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="grid">
+            <!-- Guest Count Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">👥</div>
+                    <div>
+                        <div class="card-title">Guest Count</div>
+                        <div class="card-subtitle">Current estimates</div>
+                    </div>
+                </div>
+                <div class="stat-grid">
+                    <div class="stat">
+                        <span class="stat-value">30</span>
+                        <span class="stat-label">Jordyn's Side</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">15-20</span>
+                        <span class="stat-label">Ryan's Side</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">28</span>
+                        <span class="stat-label">Combined Adults</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">5</span>
+                        <span class="stat-label">Children</span>
+                    </div>
+                </div>
+                <div style="margin-top: var(--spacing-md); padding: var(--spacing-sm); background: var(--lighter); border-radius: var(--radius-md);">
+                    <strong>⚠️ Action Needed:</strong> Reconcile guest count discrepancies. What does "30 people have to have" mean? Who are Jared & Alfredo?
+                </div>
+            </div>
+
+            <!-- Budget Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">💰</div>
+                    <div>
+                        <div class="card-title">Budget Overview</div>
+                        <div class="card-subtitle">Estimated allocation for 50 guests</div>
+                    </div>
+                </div>
+                <div class="budget-table">
+                    <div class="budget-row">
+                        <span class="budget-category">Venue & Catering</span>
+                        <span class="budget-amount">$8,250</span>
+                    </div>
+                    <div class="budget-row">
+                        <span class="budget-category">Photography</span>
+                        <span class="budget-amount">$2,250</span>
+                    </div>
+                    <div class="budget-row">
+                        <span class="budget-category">Florals</span>
+                        <span class="budget-amount">$1,500</span>
+                    </div>
+                    <div class="budget-row">
+                        <span class="budget-category">Music/DJ</span>
+                        <span class="budget-amount">$1,500</span>
+                    </div>
+                    <div class="budget-row">
+                        <span class="budget-category">Attire</span>
+                        <span class="budget-amount">$1,500</span>
+                    </div>
+                    <div class="budget-row">
+                        <span class="budget-category"><strong>TOTAL BUDGET</strong></span>
+                        <span class="budget-amount"><strong>$15,000</strong></span>
+                    </div>
+                </div>
+                <div style="margin-top: var(--spacing-md); padding: var(--spacing-sm); background: #fff3cd; border-radius: var(--radius-md); border-left: 3px solid var(--warning);">
+                    <strong>📋 Action:</strong> Set your actual budget this week and update <code>wedding_budget_tracker.csv</code>
+                </div>
+            </div>
+
+            <!-- Vendor Status Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">🏢</div>
+                    <div>
+                        <div class="card-title">Vendor Pipeline</div>
+                        <div class="card-subtitle">Contact status & priorities</div>
+                    </div>
+                </div>
+                <ul class="vendor-list">
+                    <li class="vendor-item">
+                        <div>
+                            <div class="vendor-name">🏛️ Venue (TBD)</div>
+                            <div class="vendor-contact">Not researched</div>
+                        </div>
+                        <span class="badge badge-critical">CRITICAL</span>
+                    </li>
+                    <li class="vendor-item">
+                        <div>
+                            <div class="vendor-name">📸 Photographer (TBD)</div>
+                            <div class="vendor-contact">Not researched</div>
+                        </div>
+                        <span class="badge badge-critical">CRITICAL</span>
+                    </li>
+                    <li class="vendor-item">
+                        <div>
+                            <div class="vendor-name">💐 Beth (Florist)</div>
+                            <div class="vendor-contact">+1 (512) 775-2328</div>
+                        </div>
+                        <span class="badge badge-researching">Researching</span>
+                    </li>
+                    <li class="vendor-item">
+                        <div>
+                            <div class="vendor-name">🍽️ Isabella's Kitchen</div>
+                            <div class="vendor-contact">Rehearsal Dinner Option</div>
+                        </div>
+                        <span class="badge badge-researching">Researching</span>
+                    </li>
+                    <li class="vendor-item">
+                        <div>
+                            <div class="vendor-name">🎤 Singer (TBD)</div>
+                            <div class="vendor-contact">Need contact from Jordyn</div>
+                        </div>
+                        <span class="badge badge-high">High Priority</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Timeline Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">🗓️</div>
+                    <div>
+                        <div class="card-title">Critical Timeline</div>
+                        <div class="card-subtitle">Next 30 days (December 2025)</div>
+                    </div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item critical">
+                        <div class="timeline-date">THIS WEEK (Nov 22-29)</div>
+                        <div class="timeline-content">
+                            <strong>🚨 MUST DO:</strong>
+                            <ul style="margin-left: var(--spacing-md); margin-top: var(--spacing-xs);">
+                                <li>Set exact wedding date</li>
+                                <li>Establish total budget</li>
+                                <li>Finalize guest count</li>
+                                <li>Research 5-8 venues</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item critical">
+                        <div class="timeline-date">Week 2 (Dec 1-7)</div>
+                        <div class="timeline-content">
+                            <strong>Tour & book venue</strong>
+                            <p style="margin-top: var(--spacing-xs);">Schedule tours THIS week, make decision within 7 days</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item critical">
+                        <div class="timeline-date">Week 3-4 (Dec 8-21)</div>
+                        <div class="timeline-content">
+                            <strong>Book photographer & caterer</strong>
+                            <p style="margin-top: var(--spacing-xs);">Contact Beth (florist), start dress shopping</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- This Week Actions -->
+            <div class="card" id="next-actions">
+                <div class="card-header">
+                    <div class="card-icon">✅</div>
+                    <div>
+                        <div class="card-title">This Weekend Action Plan</div>
+                        <div class="card-subtitle">Complete by Sunday, Nov 24</div>
+                    </div>
+                </div>
+                <ul class="checklist">
+                    <li class="checklist-item urgent">☐ <strong>Saturday Morning:</strong> Sit down together and pick exact wedding date</li>
+                    <li class="checklist-item urgent">☐ <strong>Saturday Morning:</strong> Agree on total budget ($10K-$25K+)</li>
+                    <li class="checklist-item urgent">☐ <strong>Saturday Morning:</strong> List all guests with names</li>
+                    <li class="checklist-item urgent">☐ <strong>Saturday Afternoon:</strong> Research 5-8 venues online</li>
+                    <li class="checklist-item urgent">☐ <strong>Saturday Afternoon:</strong> Call venues to check November 2026 availability</li>
+                    <li class="checklist-item urgent">☐ <strong>Saturday Afternoon:</strong> Schedule venue tours for next week</li>
+                    <li class="checklist-item urgent">☐ <strong>Sunday Morning:</strong> Research 10 photographers (portfolios)</li>
+                    <li class="checklist-item urgent">☐ <strong>Sunday Morning:</strong> Call Beth: +1 (512) 775-2328</li>
+                    <li class="checklist-item urgent">☐ <strong>Sunday Afternoon:</strong> Research bridal shops for December</li>
+                    <li class="checklist-item urgent">☐ <strong>Sunday Afternoon:</strong> Update all CSV files with decisions</li>
+                </ul>
+            </div>
+
+            <!-- Questions Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">❓</div>
+                    <div>
+                        <div class="card-title">Questions to Answer</div>
+                        <div class="card-subtitle">Blocking progress - resolve this week</div>
+                    </div>
+                </div>
+                <ul class="checklist">
+                    <li class="checklist-item">1️⃣ What is the exact wedding date? (Which Saturday in Nov 2026?)</li>
+                    <li class="checklist-item">2️⃣ What is the total budget? ($__________)</li>
+                    <li class="checklist-item">3️⃣ What does "30 people have to have" mean?</li>
+                    <li class="checklist-item">4️⃣ Final guest count target? (Min: ___, Max: ___, Ideal: ___)</li>
+                    <li class="checklist-item">5️⃣ Who are Jared & Alfredo? (Details for guest list)</li>
+                    <li class="checklist-item">6️⃣ Singer contact info? (Ceremony musician Jordyn saw)</li>
+                    <li class="checklist-item">7️⃣ Location preference? (Where are most guests located?)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- November Wedding Tips -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">💡</div>
+                <div>
+                    <div class="card-title">November Wedding Considerations</div>
+                    <div class="card-subtitle">Important factors for your fall wedding</div>
+                </div>
+            </div>
+            <div class="grid" style="margin-top: var(--spacing-md);">
+                <div style="background: var(--lighter); padding: var(--spacing-md); border-radius: var(--radius-md);">
+                    <strong>🌅 Sunset Timing</strong>
+                    <p style="margin-top: var(--spacing-xs); color: var(--gray);">November sunset: 4:30-5:30 PM. Plan ceremony by 3-4pm for natural light photos, or do "First Look" before ceremony.</p>
+                </div>
+                <div style="background: var(--lighter); padding: var(--spacing-md); border-radius: var(--radius-md);">
+                    <strong>🌤️ Weather</strong>
+                    <p style="margin-top: var(--spacing-xs); color: var(--gray);">Cooler temps, possible rain. Have indoor backup plan. Consider heaters for outdoor elements.</p>
+                </div>
+                <div style="background: var(--lighter); padding: var(--spacing-md); border-radius: var(--radius-md);">
+                    <strong>🦃 Holiday Conflicts</strong>
+                    <p style="margin-top: var(--spacing-xs); color: var(--gray);">Avoid weekend before Thanksgiving and Black Friday weekend. Best: First 2-3 weekends of November.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resources -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">📚</div>
+                <div>
+                    <div class="card-title">Planning Resources</div>
+                    <div class="card-subtitle">Your documentation & tracking tools</div>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <a href="README.md" class="btn btn-primary">📖 Project README</a>
+                <a href="docs/TIMELINE_ANALYSIS.md" class="btn btn-primary">📅 Full Timeline</a>
+                <a href="docs/NOTES.md" class="btn btn-primary">📝 Planning Notes</a>
+                <a href="wedding_guest_list.csv" class="btn btn-accent">👥 Guest List CSV</a>
+                <a href="wedding_budget_tracker.csv" class="btn btn-accent">💰 Budget Tracker</a>
+                <a href="wedding_vendor_tracker.csv" class="btn btn-accent">🏢 Vendor Tracker</a>
+                <a href="wedding_metrics_summary.csv" class="btn btn-accent">📊 Metrics Dashboard</a>
+                <a href="CHANGELOG.md" class="btn btn-accent">📜 Changelog</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>💍 <strong>Zimmerman-Ginsberg Wedding 2026</strong> 💐</p>
+        <p style="margin-top: var(--spacing-xs);">Planning Repository | Generated by <a href="https://claude.ai">Claude (claude-sonnet-4-5-20250929)</a></p>
+        <p style="margin-top: var(--spacing-xs); font-size: 0.9rem;">Last Updated: November 22, 2025 | Version 0.2.0</p>
+        <p style="margin-top: var(--spacing-sm); font-size: 0.85rem; opacity: 0.7;">
+            🤖 Built with world-class design standards | Optimized for desktop & mobile
+        </p>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add current date to console
+        console.log('%c💍 Zimmerman-Ginsberg Wedding 2026 Dashboard', 'font-size: 20px; font-weight: bold; color: #e8b4b8;');
+        console.log('%cGenerated:', 'font-weight: bold;', new Date().toLocaleDateString());
+        console.log('%cDays until wedding (approx):', 'font-weight: bold;', '358 days');
+    </script>
+</body>
+</html>
