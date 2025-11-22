@@ -85,18 +85,19 @@ Update your real numbers in: [wedding_budget_tracker.csv](../wedding_budget_trac
 
 ---
 
-## 👥 Guest Count - Questions to Answer
+## 👥 Guest Count - Tentative Estimates
 
-**Current Data:**
-- Jordyn's side: 30 minimum
-- Ryan's side: 15-20 estimated
-- Combined list: 28 adults + 5 kids = 33 total
+**Current Estimates (TBD - To Be Confirmed):**
 
-**Needs Clarification:**
-1. How do these numbers relate to each other?
-2. Is the combined 33 separate from or part of the side counts?
-3. Final target: Minimum ___, Maximum ___, Ideal ___?
-4. Who are Jared & Alfredo? (Need details for guest list)
+- Jordyn's side: ~30 guests (tentative)
+- Ryan's side: ~15-20 guests (tentative)
+- Combined working estimate: 28 adults + 5 kids = 33 total
+
+**Next Steps:**
+
+1. Finalize exact guest list with names
+2. Confirm final headcount for venue capacity planning
+3. Set target ranges: Minimum \_\_\_, Maximum \_\_\_, Ideal \_\_\_?
 
 Update guest list: [wedding_guest_list.csv](../wedding_guest_list.csv)
 
