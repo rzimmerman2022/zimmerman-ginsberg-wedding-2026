@@ -1,0 +1,23 @@
+# generated_by=gpt-5-codex-high; generated_at=2025-11-22 09:19:18 UTC
+metric_id,category,metric_name,definition,owner,source_data,formula_or_logic,target_value,baseline_value,current_value,as_of_date,update_cadence,notes
+M001,Guest Count,Jordyn Side Adults (Min),Minimum adult invitees from Jordyn's side,Jordyn,wedding_guest_list.csv,Count rows where Guest_Side="Jordyn" and Number_Adults>0,30,30,30,2025-11-22,Weekly,"Use exact count once names are added"
+M002,Guest Count,Ryan Side Adults (Est),Estimated adult invitees from Ryan's side,Ryan,wedding_guest_list.csv,Count rows where Guest_Side="Ryan" and Number_Adults>0,20,15,15-20,2025-11-22,Weekly,"Refine to a single count as guest list is filled"
+M003,Guest Count,Combined Adults,Total adult invitees across both sides,Jordyn & Ryan,wedding_guest_list.csv,Sum Number_Adults where Invite_Status<>"Not Sent",TBD,28,28,2025-11-22,Weekly,"TBD target once venue capacity finalized"
+M004,Guest Count,Combined Children,Total child invitees across both sides,Jordyn & Ryan,wedding_guest_list.csv,Sum Number_Children where Invite_Status<>"Not Sent",TBD,5,5,2025-11-22,Weekly,"Keep children count in sync with headcount"
+M005,Guest Count,Total Headcount,Adults + children expected,Jordyn & Ryan,wedding_guest_list.csv,M003 + M004,=M003 target,33,33,2025-11-22,Weekly,"Use for venue and catering min/maximums"
+M006,Guest Count,Invitations Sent,Invites mailed or emailed,Jordyn & Ryan,wedding_guest_list.csv,COUNTIFS(Invitation_Sent,"Yes"),=M005,0,0,2025-11-22,Weekly,"Switch to rolling count when invites start"
+M007,Guest Count,RSVP Yes,Guests confirmed attending,Jordyn & Ryan,wedding_guest_list.csv,COUNTIFS(Attending_Status,"Yes"),=M005,0,0,2025-11-22,Weekly,"Track adults and kids separately in the guest list"
+M008,Guest Count,RSVP No,Guests declined,Jordyn & Ryan,wedding_guest_list.csv,COUNTIFS(Attending_Status,"No"),0,0,0,2025-11-22,Weekly,
+M009,Guest Count,Pending RSVPs,Guests without a final response,Jordyn & Ryan,wedding_guest_list.csv,COUNTIFS(Invitation_Sent,"Yes",Attending_Status,"Pending"),0,0,0,2025-11-22,Weekly,"Should drop to zero after RSVP deadline"
+M010,Timeline,Months Until Wedding,Months remaining once date is set,Jordyn,wedding_metrics_summary.csv,DATEDIF(TODAY(),WEDDING_DATE,"m"),TBD,TBD,TBD,2025-11-22,Monthly,"Fill WEDDING_DATE in metrics summary once chosen"
+M011,Timeline,Days Until Wedding,Day countdown,Jordyn,wedding_metrics_summary.csv,Wedding_Date - TODAY(),TBD,TBD,TBD,2025-11-22,Daily,"Auto-calc in Sheets once date is known"
+M012,Timeline,Save the Dates Sent,Whether save-the-dates are out,Jordyn,wedding_guest_list.csv,IF(COUNTIFS(Save_Date_Sent,"Yes")>0,"Yes","No"),Yes,No,No,2025-11-22,Weekly,
+M013,Timeline,Invitations Sent (Flag),Whether invitations are out,Jordyn & Ryan,wedding_guest_list.csv,IF(COUNTIFS(Invitation_Sent,"Yes")>0,"Yes","No"),Yes,No,No,2025-11-22,Weekly,
+M014,Venue,Venue Capacity,Maximum guests allowed,Jordyn & Ryan,wedding_metrics_summary.csv,Manual entry,TBD,0,0,2025-11-22,On change,"Update after venue selection"
+M015,Budget,Total Budget (USD),Top-line budget,Ryan,wedding_budget_tracker.csv,Manual entry per budget tracker,=SUM(Estimated_Cost),0,0,2025-11-22,On change,"Replace 0 with agreed budget"
+M016,Budget,Spent to Date (USD),Actual spending so far,Ryan,wedding_budget_tracker.csv,SUM(Actual_Cost),<=Budget,0,0,2025-11-22,Weekly,"Keep deposits and payments current"
+M017,Budget,Remaining Budget (USD),Budget left after spending,Ryan,wedding_budget_tracker.csv,M015 - M016,>=0,0,0,2025-11-22,Weekly,
+M018,Budget,Cost per Guest (USD),Cost efficiency per attendee,Ryan,wedding_budget_tracker.csv,IF(M007>0,M016/M007,""),<=Budget/M005,0,0,2025-11-22,Weekly,"Becomes meaningful after RSVPs arrive"
+M019,Vendors,Vendors Booked,Count of vendors with confirmed bookings,Jordyn & Ryan,wedding_vendor_tracker.csv,COUNTIFS(Decision_Status,"Booked"),All priority vendors,0,0,2025-11-22,Weekly,
+M020,Vendors,Contracts Signed,Contracts executed,Jordyn & Ryan,wedding_vendor_tracker.csv,COUNTIFS(Contract_Status,"Signed"),All booked vendors,0,0,2025-11-22,Weekly,
+M021,Tasks,Tasks Completed,Checklist progress,Jordyn & Ryan,external task list,COUNTIFS(Status,"Done"),100%,0,0,2025-11-22,Weekly,"Create a task list or connect to project tool"

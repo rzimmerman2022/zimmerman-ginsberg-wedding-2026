@@ -1,0 +1,14 @@
+# File: wedding_guest_list.csv
+# Created By: claude-sonnet-4-5-20250929
+# Created Date: 2025-11-22
+# Last Modified By: claude-sonnet-4-5-20250929
+# Last Modified Date: 2025-11-22 14:45:00 UTC
+# Description: Master guest tracking list with RSVP and attendance data
+# Current Guest Count: Jordyn=30 min, Ryan=15-20 est, Combined=28 adults + 5 kids = 33 total
+#
+Guest_ID,First_Name,Last_Name,Guest_Side,Relationship,Address,City,State,ZIP,Email,Phone,Invite_Status,Save_Date_Sent,Invitation_Sent,RSVP_Received,Attending_Status,Number_Adults,Number_Children,Plus_One_Name,Dietary_Restrictions,Meal_Choice,Rehearsal_Dinner,Welcome_Party,Ceremony,Reception,After_Party,Table_Number,Gift_Received,Gift_Description,Thank_You_Sent,Notes
+1,,,Jordyn,,,,,,,,,Not Sent,No,No,Pending,1,0,,,,No,No,Yes,Yes,No,,,No,No,
+2,,,Jordyn,,,,,,,,,Not Sent,No,No,Pending,1,0,,,,No,No,Yes,Yes,No,,,No,No,
+3,,,Ryan,,,,,,,,,Not Sent,No,No,Pending,1,0,,,,No,No,Yes,Yes,No,,,No,No,
+4,,,Ryan,,,,,,,,,Not Sent,No,No,Pending,1,0,,,,No,No,Yes,Yes,No,,,No,No,
+5,,,Both,,,,,,,,,Not Sent,No,No,Pending,1,0,,,,No,No,Yes,Yes,No,,,No,No,

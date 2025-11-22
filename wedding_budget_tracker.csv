@@ -1,0 +1,36 @@
+# File: wedding_budget_tracker.csv
+# Created By: claude-sonnet-4-5-20250929
+# Created Date: 2025-11-22
+# Last Modified By: claude-sonnet-4-5-20250929
+# Last Modified Date: 2025-11-22 14:45:00 UTC
+# Description: Budget tracking with estimated vs actual costs, deposits, and payment schedules
+# Total Budget: TBD | Total Spent: $0 | Total Deposits: $0
+#
+Category,Vendor_Name,Item_Description,Estimated_Cost,Actual_Cost,Deposit_Amount,Deposit_Paid_Date,Balance_Due,Final_Payment_Date,Payment_Method,Paid_By,Contract_Signed,Notes,Priority
+Venue,,,0,0,0,,,,,,,High
+Catering,,,0,0,0,,,,,,,High
+Photography,,,0,0,0,,,,,,,High
+Videography,,,0,0,0,,,,,,,Medium
+Florist,,,0,0,0,,,,,,,Medium
+DJ/Band,,,0,0,0,,,,,,,High
+Wedding Dress,,,0,0,0,,,,,,,High
+Groom Attire,,,0,0,0,,,,,,,Medium
+Bridesmaid Dresses,,,0,0,0,,,,,,,Low
+Groomsmen Attire,,,0,0,0,,,,,,,Low
+Invitations,,,0,0,0,,,,,,,Medium
+Decorations,,,0,0,0,,,,,,,Low
+Wedding Cake,,,0,0,0,,,,,,,Medium
+Transportation,,,0,0,0,,,,,,,Low
+Hotel Block,,,0,0,0,,,,,,,Medium
+Hair & Makeup,,,0,0,0,,,,,,,Medium
+Wedding Planner,,,0,0,0,,,,,,,Medium
+Ceremony Musicians,,,0,0,0,,,,,,,Low
+Wedding Favors,,,0,0,0,,,,,,,Low
+Rehearsal Dinner,,,0,0,0,,,,,,,Medium
+Welcome Party,,,0,0,0,,,,,,,Low
+After Party,,,0,0,0,,,,,,,Low
+Honeymoon,,,0,0,0,,,,,,,High
+Wedding Rings,,,0,0,0,,,,,,,High
+Marriage License,,,0,0,0,,,,,,,High
+Insurance,,,0,0,0,,,,,,,Medium
+Miscellaneous,,,0,0,0,,,,,,,Low

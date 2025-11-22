@@ -1,0 +1,42 @@
+# File: wedding_metrics_summary.csv
+# Created By: claude-sonnet-4-5-20250929
+# Created Date: 2025-11-22
+# Last Modified By: claude-sonnet-4-5-20250929
+# Last Modified Date: 2025-11-22 14:45:00 UTC
+# Description: High-level metrics dashboard tracking guest count, budget, vendors, and timeline
+# Update Frequency: Weekly or after significant changes
+#
+Metric_Category,Metric_Name,Current_Value,Target_Value,Last_Updated,Notes
+Guest Count,Jordyn's Side (Minimum),30,,,Minimum count from Jordyn
+Guest Count,Ryan's Side (Estimated),15-20,,,Estimated range
+Guest Count,Combined List - Adults,28,,,Current combined adult count
+Guest Count,Combined List - Children,5,,,Current combined children count
+Guest Count,Total Combined,33,,,28 adults + 5 kids
+Guest Count,Total Invited,0,,,Not yet sent invitations
+Guest Count,Total RSVP Yes,0,,,
+Guest Count,Total RSVP No,0,,,
+Guest Count,Pending RSVPs,0,,,
+Guest Count,Final Headcount,0,,,For venue/catering
+Budget,Total Budget,0,,,Overall wedding budget
+Budget,Spent to Date,0,,,
+Budget,Remaining Budget,0,,,
+Budget,Cost Per Guest,0,,,Budget divided by guest count
+Budget,Largest Expense Category,,,,,
+Venue,Venues Researched,0,,,
+Venue,Venues Toured,0,,,
+Venue,Venue Booked,No,,,
+Venue,Venue Capacity,0,,,Maximum guests allowed
+Timeline,Wedding Date,2026,,,Year only - specific date TBD
+Timeline,Months Until Wedding,,,,,
+Timeline,Days Until Wedding,,,,,
+Timeline,Save the Dates Sent,No,,,
+Timeline,Invitations Sent,No,,,
+Timeline,RSVP Deadline,,,,,
+Vendors,Total Vendors Needed,0,,,
+Vendors,Vendors Contacted,0,,,
+Vendors,Vendors Booked,0,,,
+Vendors,Contracts Signed,0,,,
+Tasks,Total Tasks,0,,,
+Tasks,Completed Tasks,0,,,
+Tasks,Overdue Tasks,0,,,
+Tasks,Tasks This Month,0,,,
